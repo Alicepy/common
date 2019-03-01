@@ -1,0 +1,109 @@
+.common-select-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+}
+.common-select-container .select-show {
+  text-align: left;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 180px;
+  padding: 0 5px;
+  background: url('../images/arrow-triangle.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: 18px!important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.common-select-container .select-content {
+  position: absolute;
+  display: none;
+  top: 29px;
+  width: 180px;
+  height: 250px;
+  z-index: 1024;
+  background: #f8f8f8;
+  overflow: auto;
+  border: solid 1px #bbb;
+}
+.common-select-container .select-content iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.common-select-container .select-content.select-content-checkbox {
+  padding-top: 35px;
+}
+.common-select-container .select-content.select-separate .separate-wrap {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding-right: 20px;
+  box-sizing: border-box;
+  height: 38px;
+}
+.common-select-container .select-content.select-separate .separate-wrap .select-filter {
+  width: 100%!important;
+  margin: 5px 0 5px 5px;
+  position: relative;
+}
+.common-select-container .select-content.select-separate .separate-wrap i {
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  cursor: pointer;
+  color: #666;
+}
+.common-select-container .select-content .select-filter {
+  width: 96%!important;
+  margin: 5px 2%;
+  height: 28px;
+  top: 0;
+  position: absolute;
+}
+.common-select-container .select-content ul {
+  width: 100% !important;
+  overflow: auto !important;
+  height: 100% !important;
+  scrollbar-arrow-color: #000000;
+}
+.common-select-container .select-content ul li {
+  width: 100% !important;
+  min-height: 28px !important;
+  line-height: 28px !important;
+  border-bottom: solid 1px #ddd;
+  color: #666;
+  cursor: pointer;
+  text-align: left !important;
+  display: table;
+  padding-left: 3px;
+  margin: 0!important;
+}
+.common-select-container .select-content ul li:hover {
+  background: #e5e5e5;
+}
+.common-select-container .select-content ul li input[type='checkbox'] {
+  vertical-align: middle;
+  margin-top: -2px;
+  width: 15px;
+  display: table-cell;
+}
+.common-select-container .select-content ul li span {
+  display: table-cell;
+  width: 100%;
+  padding: 0 5px;
+  word-break: break-all;
+}
+.common-select-container .select-content ul .active {
+  background: #e5e5e5;
+}

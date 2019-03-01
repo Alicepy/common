@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <div class="modal-title">{{content.title || '回放视频'}}</div>
+    <div class="modal-close" ng-click="cancel()">
+        <i class="fa fa-times"></i>
+    </div>
+</div>
+<div class="modal-body" data-ng-init="replayCtrl.load()">
+    <div style="background:#ddd;width:508px;height:320px">
+        <object ng-if="replayCtrl.isIE" id="playerOcx" name="playerOcx" classid="clsid:8C85B9C1-6B4C-4ECB-9887-2428DA03F77C" width="508" height="320"> </object>
+        <div class="xl-video-container" ng-if="!replayCtrl.isIE">
+            <div class="xl-video-play video-js vjs-default-skin vjs-big-play-centered" id="playContainer">
+                <!-- 播放流容器 -->
+            </div>
+            <!-- 播放器控制面板 -->
+            <div class="xl-video-controller">
+                <div class="xl-progress">
+                    <div class="xl-progress-bar" ng-mousedown="xlVideo.mousedown($event)" ng-mousemove="xlVideo.mousemove($event)">
+                        <div class="xl-progress-play"style="width:{{xlVideo.duration == 0 ? 0: xlVideo.currentDuration*100/xlVideo.duration}}%"></div>
+                        <div class="xl-progress-dot"style="left:{{xlVideo.duration == 0 ? 0: xlVideo.currentDuration*100/xlVideo.duration}}%"></div>
+                        <div class="xl-skip-line"style="left:{{xlVideo.lineLeftRatio*100}}%"></div>
+                        <div class="xl-contrl-tip"style="left:{{xlVideo.tipLeftRatio*100}}%">{{xlVideo.hoverTip}}</div>
+                    </div>
+                </div>
+                <div class="xl-tool-bar">
+                    <div class="xl-bar-left">
+                        <div class="xl-play-btn">
+                            <i ng-if="xlVideo.isPause" class="fa fa-play" title="播放" ng-click="xlVideo.play()"></i>
+                            <i ng-if="!xlVideo.isPause" class="fa fa-pause" title="暂停" ng-click="xlVideo.pause()"></i>
+                        </div>
+                        <div class="xl-time-display">
+                            <span class="xl-time-cur">{{xlVideo.currentTime}}</span>
+                            <span class="xl-time-cutline">/</span>
+                            <span class="xl-time-dur">{{xlVideo.formatDuration}}</span>
+                        </div>
+                    </div>
+                    <div class="xl-bar-right">
+                        <div class="xl-btn-fullscreen">
+                            <i ng-if="!xlVideo.isFullscreen" ng-click="xlVideo.fullscreen()" class="fa fa-expand" title="全屏"></i>
+                            <i ng-if="xlVideo.isFullscreen" ng-click="xlVideo.exitFullscreen()" class="fa fa-compress" title="退出全屏"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

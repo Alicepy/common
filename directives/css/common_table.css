@@ -1,0 +1,418 @@
+.public-hw {
+  width: 100%;
+  height: 100%;
+}
+.pagination {
+  margin: 10px 0 0 0!important;
+}
+.common-table-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.common-table-container.show-pagination {
+  padding-bottom: 40px;
+}
+.common-table-container.show-toolbar {
+  padding-top: 40px;
+}
+.common-table-container.show-toolbar-pagination {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.common-table-container .table-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  border: solid 1px #eee;
+  border-radius: 5px 5px 0 0;
+}
+.common-table-container .table-header .table-title {
+  font-weight: 700;
+  padding-left: 10px;
+  line-height: 40px;
+}
+.common-table-container .table-header .toolbar-btn {
+  height: 30px;
+  margin: 5px;
+}
+.common-table-container .table-header .toolbar-btn button {
+  height: 30px;
+  padding: 5px 10px;
+}
+.common-table-container .table-header .toolbar-btn button i {
+  margin-right: 3px;
+}
+.common-table-container .table-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.common-table-container .table-content .common-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate!important;
+  border: solid 1px #eee;
+  color: #666;
+}
+.common-table-container .table-content .common-table.common-table-hover tr:hover {
+  background: #E4EFF6;
+}
+.common-table-container .table-content .common-table input {
+  cursor: pointer;
+}
+.common-table-container .table-content .common-table tbody tr.odd {
+  background: #fff;
+}
+.common-table-container .table-content .common-table tbody tr.even {
+  background: #F9F9F9;
+}
+.common-table-container .table-content .common-table tbody tr.selected {
+  background: #E4EFF6!important;
+}
+.common-table-container .table-content .common-table tr th {
+  text-align: center;
+  height: 32px;
+  line-height: 33px;
+  background: #F5F5F5;
+  color: #333;
+}
+.common-table-container .table-content .common-table tr th.isActive {
+  background-image: url(../images/arrow-up.png) !important;
+  background-position: center right !important;
+  background-repeat: no-repeat !important;
+}
+.common-table-container .table-content .common-table tr th.isActive.down {
+  background-image: url(../images/arrow-down.png) !important;
+  background-position: center right !important;
+  background-repeat: no-repeat !important;
+}
+.common-table-container .table-content .common-table tr th.table-checkbox {
+  width: 30px;
+}
+.common-table-container .table-content .common-table tr td {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  min-width: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: keep-all;
+  padding: 0 5px;
+}
+.common-table-container .table-content .common-table tr td a {
+  text-decoration: none;
+  color: #fff;
+  width: 24px;
+  cursor: pointer;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center center!important;
+  vertical-align: middle;
+  margin: 0px 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.common-table-container .table-content .common-table tr td a:hover {
+  background-color: #4498F6;
+  background-position: center center!important;
+}
+.common-table-container .table-content .common-table tr td a.ope-hidden {
+  /* visibility: hidden; */
+  cursor: not-allowed;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.common-table-container .table-content .common-table tr td a.ope-hidden:hover {
+  background-color: #fff;
+}
+.common-table-container .table-content .common-table tr td .common-table-test-door {
+  background-image: url("../images/ope-icons/door_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-test-door:hover {
+  background-image: url("../images/ope-icons/door_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-open-door {
+  background-image: url("../images/ope-icons/open_door_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-open-door:hover {
+  background-image: url("../images/ope-icons/open_door_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-relation {
+  background-image: url("../images/ope-icons/relation_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-relation:hover {
+  background-image: url("../images/ope-icons/relation_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-upload {
+  background-image: url("../images/ope-icons/upload_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-upload:hover {
+  background-image: url("../images/ope-icons/upload_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-deal {
+  background-image: url("../images/ope-icons/deal_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-deal:hover {
+  background-image: url("../images/ope-icons/deal_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-amplification {
+  background-image: url("../images/ope-icons/amplification_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-amplification:hover {
+  background-image: url("../images/ope-icons/amplification_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-synchronize {
+  background-image: url("../images/ope-icons/synchronize_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-synchronize:hover {
+  background-image: url("../images/ope-icons/synchronize_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-view {
+  background-image: url("../images/ope-icons/look_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-view:hover {
+  background-image: url("../images/ope-icons/look_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-delete {
+  background-image: url("../images/ope-icons/delete_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-delete:hover {
+  background-image: url("../images/ope-icons/delete_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-reform {
+  background-image: url("../images/ope-icons/edit_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-reform:hover {
+  background-image: url("../images/ope-icons/edit_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-download {
+  background-image: url("../images/ope-icons/download_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-download:hover {
+  background-image: url("../images/ope-icons/download_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-inStorage {
+  background-image: url("../images/ope-icons/inStorage_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-inStorage:hover {
+  background-image: url("../images/ope-icons/inStorage_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-outStorage {
+  background-image: url("../images/ope-icons/outStorage_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-outStorage:hover {
+  background-image: url("../images/ope-icons/outStorage_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-import {
+  background-image: url("../images/ope-icons/import_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-import:hover {
+  background-image: url("../images/ope-icons/import_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-export {
+  background-image: url("../images/ope-icons/export_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-export:hover {
+  background-image: url("../images/ope-icons/export_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-files {
+  background-image: url("../images/ope-icons/files_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-files:hover {
+  background-image: url("../images/ope-icons/files_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-catalog {
+  background-image: url("../images/ope-icons/catalog_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-catalog:hover {
+  background-image: url("../images/ope-icons/catalog_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-finger {
+  background-image: url("../images/ope-icons/finger_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-finger:hover {
+  background-image: url("../images/ope-icons/finger_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-lock {
+  background-image: url("../images/ope-icons/lock_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-lock:hover {
+  background-image: url("../images/ope-icons/lock_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-unlock {
+  background-image: url("../images/ope-icons/unlock_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-unlock:hover {
+  background-image: url("../images/ope-icons/unlock_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-start {
+  background-image: url("../images/ope-icons/start_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-start:hover {
+  background-image: url("../images/ope-icons/start_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-stop {
+  background-image: url("../images/ope-icons/stop_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-stop:hover {
+  background-image: url("../images/ope-icons/stop_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-connect {
+  background-image: url("../images/ope-icons/connect_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-connect:hover {
+  background-image: url("../images/ope-icons/connect_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-unconnect {
+  background-image: url("../images/ope-icons/unconnect_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-unconnect:hover {
+  background-image: url("../images/ope-icons/unconnect_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-confirm {
+  background-image: url("../images/ope-icons/confirm_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-confirm:hover {
+  background-image: url("../images/ope-icons/confirm_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-copy {
+  background-image: url("../images/ope-icons/copy_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-copy:hover {
+  background-image: url("../images/ope-icons/copy_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-disk {
+  background-image: url("../images/ope-icons/disk_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-disk:hover {
+  background-image: url("../images/ope-icons/disk_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-info {
+  background-image: url("../images/ope-icons/info_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-info:hover {
+  background-image: url("../images/ope-icons/info_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-inform {
+  background-image: url("../images/ope-icons/inform_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-inform:hover {
+  background-image: url("../images/ope-icons/inform_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-key {
+  background-image: url("../images/ope-icons/key_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-key:hover {
+  background-image: url("../images/ope-icons/key_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-print {
+  background-image: url("../images/ope-icons/print_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-print:hover {
+  background-image: url("../images/ope-icons/print_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-set {
+  background-image: url("../images/ope-icons/set_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-set:hover {
+  background-image: url("../images/ope-icons/set_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-notice {
+  background-image: url("../images/ope-icons/notice_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-notice:hover {
+  background-image: url("../images/ope-icons/notice_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-people {
+  background-image: url("../images/ope-icons/people_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-people:hover {
+  background-image: url("../images/ope-icons/people_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-relay {
+  background-image: url("../images/ope-icons/relay_normal.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-finger-signature {
+  background-image: url("../images/ope-icons/finger_signature.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-finger-signature:hover {
+  background-image: url("../images/ope-icons/finger_signature_hover.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-flow {
+  background-image: url("../images/ope-icons/flow.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-end-evalution {
+  background-image: url("../images/ope-icons/end_evalution.png");
+}
+.common-table-container .table-content .common-table tr td .common-table-end-evalution:hover {
+  background-image: url("../images/ope-icons/end_evalution_hover.png");
+}
+.common-table-container .table-footer {
+  position: absolute;
+  width: 100%;
+}
+.common-table-container .table-footer .total-size {
+  display: inline-block;
+  height: 40px;
+  padding-top: 12px;
+  color: #666;
+}
+.common-table-container .table-footer .total-size .total {
+  display: inline-block;
+  margin-right: 8px;
+}
+.common-table-container .table-footer .total-size .total span {
+  font-weight: 700;
+  margin: 0 5px;
+}
+.common-table-container .table-footer .total-size .size {
+  display: inline-block;
+}
+.common-table-container .table-footer .total-size .size select {
+  margin: 0 5px;
+}
+.common-table-container .option-dialog {
+  display: none;
+  width: 300px;
+  color: #666;
+}
+.common-table-container .option-dialog .option-content {
+  width: 100%;
+  margin-top: 5px;
+}
+.common-table-container .option-dialog .option-content ul {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.common-table-container .option-dialog .option-content ul li {
+  width: 50%;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+.common-table-container .option-dialog .option-content ul li input[type='checkbox'] {
+  margin-right: 5px;
+}
+.common-table-container .option-dialog .option-content ul li label {
+  font-weight: 400;
+  color: #666;
+}
+.common-table-container .option-dialog .option-content ul:after {
+  content: '';
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.common-table-container .option-dialog .option-top {
+  width: 100%;
+  height: 30px;
+  border-bottom: solid 1px #eee;
+  line-height: 30px;
+}

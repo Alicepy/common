@@ -1,0 +1,32 @@
+/** commonToggle **/
+.common-toggle-container {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34px;
+  height: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.common-toggle-container.active .toggle-bar {
+  background: url(../images/toggle_bar_bg_active.png);
+}
+.common-toggle-container.active .toggle-button {
+  right: -1px;
+  left: auto;
+  background: url(../images/toggle-button_active.png);
+}
+.common-toggle-container .toggle-bar {
+  width: 28px;
+  height: 12px;
+  top: 1px;
+  position: absolute;
+  background: url(../images/toggle_bar_bg.png);
+}
+.common-toggle-container .toggle-button {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  height: 18px;
+  width: 18px;
+  background: url(../images/toggle-button.png);
+}

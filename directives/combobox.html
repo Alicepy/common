@@ -1,0 +1,24 @@
+ <div class="select-block" 
+    id={{info.config.id}}  
+    style="width:{{info.config.boxWidth+'px'}};height:{{info.config.boxHeight+'px'}}">
+
+    <input type="text" 
+        class="select-input" 
+        style="width:{{info.config.boxWidth-40+'px'}};height:{{info.config.boxHeight-2+'px'}}" 
+        ng-focus="ulFocus()" 
+        ng-model="info.config.currentActivity">
+
+    <span class="input-icon"  
+        ng-click="uiShowHide()" 
+        style="height:{{info.config.boxHeight-2+'px'}}">
+    </span>
+
+    <ul class="select-ul" 
+        style="width:{{info.config.boxWidth+'px'}};top:{{info.config.boxHeight+'px'}}">
+        <li style="height:{{info.config.liHeight+'px'}};line-height:{{info.config.liHeight+'px'}} " 
+            ng-repeat="item in info.activities | filter:info.config.currentActivity " 
+            ng-click="changeText(item)">{{item.name}}
+        </li>
+    </ul>
+
+ </div>

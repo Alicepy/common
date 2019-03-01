@@ -1,0 +1,63 @@
+<div class="accordion-menu-container">
+    <div class="menu-item" ng-repeat="item in accordionConfig.data" ng-if="accordionConfig.dimension != 2">
+        <div class="item-title" ng-click="clickOneDimen(item)" ng-if="accordionConfig.dimension == 1">
+            <div class="title-icon">
+                <img ng-if="!!item[accordionConfig.oneDimenIcon]" 
+                    ng-src="{{accordionConfig.imagePrefix+item[accordionConfig.oneDimenIcon]}}"
+                    onerror="javascript:this.src='images/home/monitor.png'"/>
+                <i ng-if="!item[accordionConfig.oneDimenIcon]" class="fa fa-star"></i>
+            </div>
+            <div class="title-content" title="{{item[accordionConfig.oneDimenName]}}">
+                {{item[accordionConfig.oneDimenName]}}
+            </div>
+            <div class="title-arrow">
+                <i ng-if="!item.open" class="fa fa-chevron-right"></i>
+                <i ng-if="!!item.open" class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="item-content" ng-show="!!item.open">
+            <ul>
+                <li ng-repeat="children in item[accordionConfig.childrenName]" title="{{children[accordionConfig.twoDimenName]}}" 
+                ng-click="clickTwoDimen(children)" ng-class="{true:'active'}[children[accordionConfig.twoDimenId] == accordionConfig.selectId]">
+                    <img ng-if="accordionConfig.dimension == 0" ng-src="{{accordionConfig.imagePrefix+children[accordionConfig.twoDimenIcon]}}" />
+                    <span>{{children[accordionConfig.twoDimenName]}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-item" ng-repeat="item in accordionConfig.data" ng-if="accordionConfig.dimension == 2">
+        <div class="item-title" ng-click="clickOneDimen(item)" ng-if="item[accordionConfig.childrenName] && item[accordionConfig.childrenName].length">
+            <div class="title-icon">
+                <img ng-if="!!item[accordionConfig.oneDimenIcon]" 
+                    ng-src="{{accordionConfig.imagePrefix+item[accordionConfig.oneDimenIcon]}}"
+                    onerror="javascript:this.src='images/home/monitor.png'"/>
+                <i ng-if="!item[accordionConfig.oneDimenIcon]" class="fa fa-star"></i>
+            </div>
+            <div class="title-content" title="{{item[accordionConfig.oneDimenName]}}">
+                {{item[accordionConfig.oneDimenName]}}
+            </div>
+            <div class="title-arrow">
+                <i ng-if="!item.open" class="fa fa-chevron-right"></i>
+                <i ng-if="!!item.open" class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="item-content" ng-show="!!item.open" ng-if="item[accordionConfig.childrenName] && item[accordionConfig.childrenName].length">
+            <ul>
+                <li ng-repeat="children in item[accordionConfig.childrenName]" title="{{children[accordionConfig.twoDimenName]}}" 
+                ng-click="clickTwoDimen(children)" ng-class="{true:'active'}[children[accordionConfig.twoDimenId] == accordionConfig.selectId]">
+                    <img ng-if="accordionConfig.dimension == 0" ng-src="{{accordionConfig.imagePrefix+children[accordionConfig.twoDimenIcon]}}" />
+                    <span>{{children[accordionConfig.twoDimenName]}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="item-content" ng-if="!item[accordionConfig.childrenName]">
+            <ul>
+                <li title="{{item[accordionConfig.twoDimenName]}}" 
+                ng-click="clickTwoDimen(item)" ng-class="{true:'active'}[item[accordionConfig.twoDimenId] == accordionConfig.selectId]">
+                    <img ng-src="{{accordionConfig.imagePrefix+item[accordionConfig.twoDimenIcon]}}" />
+                    <span>{{item[accordionConfig.twoDimenName]}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

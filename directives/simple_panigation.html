@@ -1,0 +1,7 @@
+<div class="simple-panigation-container" ng-if="!!panigationConfig.total" onselectstart="return false;" style="-moz-user-select:none;">
+  <em class="fa fa-arrow-circle-left prev" ng-click="prevPage()"></em>
+  <input ng-if="panigationConfig.input" type="text" ng-model="panigationConfig.page"/>
+  <span ng-if="!panigationConfig.input">{{panigationConfig.page}}</span>
+  /<span>{{panigationConfig.total}}</span>
+  <em class="fa fa-arrow-circle-right next" ng-click="nextPage()"></em>
+</div>

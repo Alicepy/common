@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <div class="modal-title">{{content.title || '播放视频'}}</div>
+    <div class="modal-close" ng-click="cancel()">
+        <i class="fa fa-times"></i>
+    </div>
+</div>
+<div class="modal-body" data-ng-init="playCtrl.load()">
+    <div style="background:#ddd;width:500px;height:320px">
+        <object ng-if="playCtrl.isIE" id="playerOcx" name="playerOcx" classid="clsid:8C85B9C1-6B4C-4ECB-9887-2428DA03F77C" width="500" height="320"> </object>
+        <!-- <div ng-if="!playCtrl.isIE" id="playContainer" style="width:500px;height:320px;"></div> -->
+        <div ng-if="!playCtrl.isIE" class="video-js vjs-default-skin vjs-big-play-centered" id="playContainer" style="width:508px;height:320px;"></div>
+        <!-- <div ng-if="!playCtrl.isIE" class="video" style="width:500px;height:320px;" id="playContainer">
+            <b><img src="lib/CuPlayerV4/player/images/loading.gif" /> 网页视频播放器加载中，请稍后...</b>
+        </div> -->
+    </div>
+</div>

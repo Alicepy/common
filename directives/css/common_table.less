@@ -1,0 +1,426 @@
+.public-hw {
+    width: 100%;
+    height: 100%;
+  }
+.pagination{
+    margin:10px 0 0 0!important;
+}
+.common-table-container{
+    .public-hw;
+    box-sizing: border-box;
+    position: relative;
+    &.show-pagination{
+        padding-bottom: 40px;
+    }
+    &.show-toolbar{
+        padding-top:40px;
+    }
+    &.show-toolbar-pagination{
+        padding-bottom: 40px;
+        padding-top:40px;
+    }
+    .table-header{
+        position: absolute;
+        top:0;
+        width:100%;
+        height:40px;
+        border: solid 1px #eee;
+        border-radius: 5px 5px 0 0;
+        .table-title{
+            font-weight: 700;
+            padding-left:10px;
+            line-height:40px;
+        }
+        .toolbar-btn{
+            height: 30px;
+            margin: 5px;
+            button{
+                height: 30px;
+                padding: 5px 10px;
+                i{
+                    margin-right:3px;
+                }
+            }
+        }
+    }
+    .table-content{
+        .public-hw;
+        overflow: auto;
+        .common-table{
+            table-layout:fixed;
+            &.common-table-hover{
+                tr:hover{
+                    background: #E4EFF6;
+                }
+            }
+            width:100%;
+            border-collapse:separate!important;
+            border:solid 1px #eee;
+            color:#666;
+            input{
+                cursor: pointer;
+            }
+            tbody{
+                tr{
+                    &.odd{
+                        background: #fff;
+                    }
+                    &.even{
+                        background: #F9F9F9;
+                    }
+                    &.selected{
+                        background: #E4EFF6!important;
+                    }
+                }
+            }
+            tr{
+                th{
+                    text-align:center;
+                    height: 32px;
+                    line-height:33px;
+                    background: #F5F5F5;
+                    color: #333;
+                    &.isActive{
+                        background-image: url(../images/arrow-up.png) !important;
+                        background-position: center right !important;
+                        background-repeat: no-repeat !important;
+                    }
+                    &.isActive.down{
+                      background-image: url(../images/arrow-down.png) !important;
+                      background-position: center right !important;
+                      background-repeat: no-repeat !important;
+                    }
+                    &.table-checkbox{
+                        width:30px;
+                    }
+                }
+                td{
+                    height:30px;
+                    line-height:30px;
+                    text-align: center;
+                    font-size: 13px;
+                    min-width: 40px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    word-break: keep-all;
+                    padding: 0 5px;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        width: 24px;
+                        cursor: pointer;
+                        height: 24px;
+                        background-repeat: no-repeat;
+                        background-position: center center!important;
+                        vertical-align: middle;
+                        margin: 0px 5px;
+                        border-radius: 3px;
+                        display: inline-block;
+                        &:hover{
+                            background-color: #4498F6;
+                            background-position: center center!important;
+                        }
+                        &.ope-hidden{
+                            /* visibility: hidden; */
+                            cursor: not-allowed;
+                            opacity: 0.3;
+                            filter: alpha(opacity=30);
+                            &:hover{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    .common-table-test-door {
+                        background-image: url("../images/ope-icons/door_normal.png");
+                      }
+                    .common-table-test-door:hover {
+                        background-image: url("../images/ope-icons/door_hover.png");
+                    }
+                    .common-table-open-door {
+                        background-image: url("../images/ope-icons/open_door_normal.png");
+                      }
+                    .common-table-open-door:hover {
+                        background-image: url("../images/ope-icons/open_door_hover.png");
+                    }
+                    .common-table-relation{//关联
+                        background-image: url("../images/ope-icons/relation_normal.png");
+                    }
+                    .common-table-relation:hover{
+                        background-image: url("../images/ope-icons/relation_hover.png");
+                    }
+                    .common-table-upload{//上传
+                        background-image: url("../images/ope-icons/upload_normal.png");
+                    }
+                    .common-table-upload:hover{
+                        background-image: url("../images/ope-icons/upload_hover.png");
+                    }
+                    .common-table-deal{//处理
+                        background-image: url("../images/ope-icons/deal_normal.png");
+                    }
+                    .common-table-deal:hover{
+                        background-image: url("../images/ope-icons/deal_hover.png");
+                    }
+                    .common-table-amplification{//审核
+                        background-image: url("../images/ope-icons/amplification_normal.png");
+                    }
+                    .common-table-amplification:hover{
+                        background-image: url("../images/ope-icons/amplification_hover.png");
+                    }
+                    .common-table-synchronize{//同步
+                        background-image: url("../images/ope-icons/synchronize_normal.png");
+                    }
+                    .common-table-synchronize:hover{
+                        background-image: url("../images/ope-icons/synchronize_hover.png");
+                    }
+                    .common-table-view{//查看
+                        background-image: url("../images/ope-icons/look_normal.png");
+                    }
+                    .common-table-view:hover{
+                        background-image: url("../images/ope-icons/look_hover.png");
+                    }
+                    .common-table-delete{//删除
+                        background-image: url("../images/ope-icons/delete_normal.png");
+                    }
+                    .common-table-delete:hover{
+                        background-image: url("../images/ope-icons/delete_hover.png");
+                    }
+                    .common-table-reform{//编辑
+                        background-image: url("../images/ope-icons/edit_normal.png");
+                    }
+                    .common-table-reform:hover{
+                        background-image: url("../images/ope-icons/edit_hover.png");
+                    }
+                    .common-table-download{//下载
+                        background-image: url("../images/ope-icons/download_normal.png");
+                    }
+                    .common-table-download:hover{
+                        background-image: url("../images/ope-icons/download_hover.png");
+                    }
+                    .common-table-inStorage{//导入
+                        background-image: url("../images/ope-icons/inStorage_normal.png");
+                    }
+                    .common-table-inStorage:hover{
+                        background-image: url("../images/ope-icons/inStorage_hover.png");
+                    }
+                    .common-table-outStorage{//导出
+                        background-image: url("../images/ope-icons/outStorage_normal.png");
+                    }
+                    .common-table-outStorage:hover{
+                        background-image: url("../images/ope-icons/outStorage_hover.png");
+                    }
+                    .common-table-import{//导入
+                        background-image: url("../images/ope-icons/import_normal.png");
+                    }
+                    .common-table-import:hover{
+                        background-image: url("../images/ope-icons/import_hover.png");
+                    }
+                    .common-table-export{//导出
+                        background-image: url("../images/ope-icons/export_normal.png");
+                    }
+                    .common-table-export:hover{
+                        background-image: url("../images/ope-icons/export_hover.png");
+                    }
+                    .common-table-files{//文件
+                        background-image: url("../images/ope-icons/files_normal.png");
+                    }
+                    .common-table-files:hover{
+                        background-image: url("../images/ope-icons/files_hover.png");
+                    }
+                    .common-table-catalog{//编目
+                        background-image: url("../images/ope-icons/catalog_normal.png");
+                    }
+                    .common-table-catalog:hover{
+                        background-image: url("../images/ope-icons/catalog_hover.png");
+                    }
+                    .common-table-finger{//指纹
+                        background-image: url("../images/ope-icons/finger_normal.png");
+                    }
+                    .common-table-finger:hover{
+                        background-image: url("../images/ope-icons/finger_hover.png");
+                    }
+                    .common-table-lock{//锁
+                        background-image: url("../images/ope-icons/lock_normal.png");
+                    }
+                    .common-table-lock:hover{
+                        background-image: url("../images/ope-icons/lock_hover.png");
+                    }
+                    .common-table-unlock{//解锁
+                        background-image: url("../images/ope-icons/unlock_normal.png");
+                    }
+                    .common-table-unlock:hover{
+                        background-image: url("../images/ope-icons/unlock_hover.png");
+                    }
+                    .common-table-start{//开始 播放
+                        background-image: url("../images/ope-icons/start_normal.png");
+                    }
+                    .common-table-start:hover{
+                        background-image: url("../images/ope-icons/start_hover.png");
+                    }
+                    .common-table-stop{//停止
+                        background-image: url("../images/ope-icons/stop_normal.png");
+                    }
+                    .common-table-stop:hover{
+                        background-image: url("../images/ope-icons/stop_hover.png");
+                    }
+                    .common-table-connect{//连接
+                        background-image: url("../images/ope-icons/connect_normal.png");
+                    }
+                    .common-table-connect:hover{
+                        background-image: url("../images/ope-icons/connect_hover.png");
+                    }
+                    .common-table-unconnect{//断开连接
+                        background-image: url("../images/ope-icons/unconnect_normal.png");
+                    }
+                    .common-table-unconnect:hover{
+                        background-image: url("../images/ope-icons/unconnect_hover.png");
+                    }
+                    .common-table-confirm{//确认
+                        background-image: url("../images/ope-icons/confirm_normal.png");
+                    }
+                    .common-table-confirm:hover{
+                        background-image: url("../images/ope-icons/confirm_hover.png");
+                    }
+                    .common-table-copy{//复制
+                        background-image: url("../images/ope-icons/copy_normal.png");
+                    }
+                    .common-table-copy:hover{
+                        background-image: url("../images/ope-icons/copy_hover.png");
+                    }
+                    .common-table-disk{//光盘 放碟
+                        background-image: url("../images/ope-icons/disk_normal.png");
+                    }
+                    .common-table-disk:hover{
+                        background-image: url("../images/ope-icons/disk_hover.png");
+                    }
+                    .common-table-info{//信息
+                        background-image: url("../images/ope-icons/info_normal.png");
+                    }
+                    .common-table-info:hover{
+                        background-image: url("../images/ope-icons/info_hover.png");
+                    }
+                    .common-table-inform{//告知 广播
+                        background-image: url("../images/ope-icons/inform_normal.png");
+                    }
+                    .common-table-inform:hover{
+                        background-image: url("../images/ope-icons/inform_hover.png");
+                    }
+                    .common-table-key{//钥匙
+                        background-image: url("../images/ope-icons/key_normal.png");
+                    }
+                    .common-table-key:hover{
+                        background-image: url("../images/ope-icons/key_hover.png");
+                    }
+                    .common-table-print{//打印
+                        background-image: url("../images/ope-icons/print_normal.png");
+                    }
+                    .common-table-print:hover{
+                        background-image: url("../images/ope-icons/print_hover.png");
+                    }
+                    .common-table-set{//设置
+                        background-image: url("../images/ope-icons/set_normal.png");
+                    }
+                    .common-table-set:hover{
+                        background-image: url("../images/ope-icons/set_hover.png");
+                    }
+                    .common-table-notice{//注意 警告
+                        background-image: url("../images/ope-icons/notice_normal.png");
+                    }
+                    .common-table-notice:hover{
+                        background-image: url("../images/ope-icons/notice_hover.png");
+                    }
+                    .common-table-people{//注意 警告
+                        background-image: url("../images/ope-icons/people_normal.png");
+                    }
+                    .common-table-people:hover{
+                        background-image: url("../images/ope-icons/people_hover.png");
+                    }
+                    .common-table-relay{//接替
+                         background-image: url("../images/ope-icons/relay_normal.png");
+                    }
+                    .common-table-finger-signature{
+                        background-image: url("../images/ope-icons/finger_signature.png");
+                    }
+                    .common-table-finger-signature:hover{
+                        background-image: url("../images/ope-icons/finger_signature_hover.png");
+                    }
+                    .common-table-flow{//流程图
+                        background-image: url("../images/ope-icons/flow.png");
+                    }
+                    .common-table-end-evalution{
+                        background-image: url("../images/ope-icons/end_evalution.png");
+                    }
+                    .common-table-end-evalution:hover{
+                        background-image: url("../images/ope-icons/end_evalution_hover.png");
+                    }
+                }   
+            }
+        }
+    }
+    .table-footer{
+        position: absolute;
+        width: 100%;
+        //bottom: 0;
+        .total-size{
+            display: inline-block;
+            height: 40px;
+            padding-top: 12px;
+            color:#666;
+            .total{
+                display: inline-block;
+                margin-right:8px;
+                span{
+                    font-weight: 700;
+                    margin:0 5px;
+                }
+            }
+            .size{
+                display: inline-block;
+                select{
+                    margin:0 5px;
+                }
+            }
+        }
+    }
+    
+    .option-dialog{
+        display: none;
+        width:300px;
+        color:#666;
+        .option-content{
+            width: 100%;
+            margin-top: 5px;
+            ul{
+                width: 100%;
+                padding-bottom: 10px;
+                li{
+                    width: 50%;
+                    float: left;
+                    height: 30px;
+                    line-height: 30px;
+                    input[type='checkbox']{
+                        margin-right: 5px;
+                    }
+                    label{
+                        font-weight: 400;
+                        color:#666;
+                    }
+                }
+                &:after{
+                    content: '';
+                    clear: both;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+        .option-top{
+            width: 100%;
+            height: 30px;
+            border-bottom: solid 1px #eee;
+            line-height: 30px;
+        }
+    }
+}

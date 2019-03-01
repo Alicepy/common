@@ -1,0 +1,12 @@
+<div class="ratio-tool-container" onselectstart="return false;" style="-moz-user-select:none;">
+    <div class="tool-text">
+        {{ratioConfig.percentage}}%
+    </div>
+    <div class="tool-opt">
+        <i title="缩小" class="fa fa-minus" ng-click="setRatio(-1)"></i>
+        <i title="放大" class="fa fa-plus" ng-click="setRatio(1)"></i>
+    </div>
+    <div class="tool-reset">
+        <input type="button" value="重置" ng-click="setRatio(0)">
+    </div>
+</div>

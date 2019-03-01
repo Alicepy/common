@@ -1,0 +1,8 @@
+<div class="common-list" ng-show="listConfig.show" 
+     ng-style="{'top':listConfig.axios.y+'px','left': listConfig.axios.x+'px'}">
+    <ul>
+        <li ng-repeat="item in listConfig.list" ng-click="item.callback();listConfig.show=false;">
+            {{item.name}}
+        </li>
+    </ul>
+</div>

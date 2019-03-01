@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <div class="modal-title">签名板</div>
+    <div class="modal-close" ng-click="cancel()">
+        <i class="fa fa-times"></i>
+    </div>
+</div>
+<div class="modal-body" data-ng-init="load()">
+    <div style="background:#ddd;width:410px;height:180px">
+        <object id="HWPenSign" name="HWPenSign" classid="clsid:E8F5278C-0C72-4561-8F7E-CCBC3E48C2E3" width="410" height="180"> </object>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="comfirm" ng-click="ok()">确定</button>
+    <button class="cancel" ng-click="cancel()">取消</button>
+</div>

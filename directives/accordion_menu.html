@@ -1,0 +1,27 @@
+<div class="accordion-menu-container">
+    <div class="menu-item" ng-repeat="item in accordionConfig.data">
+        <div class="item-title" ng-click="clickRouter(item)" ng-class="{true:'active'}[item[accordionConfig.routerId] == accordionConfig.selectId]">
+            <div class="title-icon">
+                <img ng-if="!!item[accordionConfig.oneDimenIcon]" 
+                    ng-src="{{accordionConfig.imagePrefix+item[accordionConfig.oneDimenIcon]+accordionConfig.imageSuffix}}"
+                    onerror="javascript:this.src='images/home/monitor.png'"/>
+                <i ng-if="!item[accordionConfig.oneDimenIcon]" class="fa fa-star"></i>
+            </div>
+            <div class="title-content" title="{{item[accordionConfig.oneDimenName]}}">
+                {{item[accordionConfig.oneDimenName]}}
+            </div>
+            <div class="title-arrow" ng-if="!!item[accordionConfig.childrenName]">
+                <i ng-if="!item.open" class="chevron-right"></i>
+                <i ng-if="!!item.open" class="chevron-down"></i>
+            </div>
+        </div>
+        <div class="item-content" ng-show="!!item.open && !!item[accordionConfig.childrenName]">
+            <ul>
+                <li ng-repeat="children in item[accordionConfig.childrenName]" title="{{children[accordionConfig.twoDimenName]}}" 
+                ng-click="clickRouter(children)" ng-class="{true:'active'}[children[accordionConfig.routerId] == accordionConfig.selectId]">
+                    <span>{{children[accordionConfig.twoDimenName]}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
