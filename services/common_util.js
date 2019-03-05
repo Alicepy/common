@@ -2,11 +2,11 @@
  * common util
  * @Author: zhangxuelian
  * @Date: 2017-10-20 14:25:27
- * @Last Modified by: liangchaoping
- * @Last Modified time: 2018-08-29 17:33:17
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-05 11:43:51
  **/
 define(['services/services'], function(services) {
-    services.service('commonUtil', function (modalExt, normalUtil, Models, security) {
+    services.service('commonUtil', function (modalExt, normalUtil, Models) {
         /**
          * 接口错误代码检测
          *
@@ -195,63 +195,7 @@ define(['services/services'], function(services) {
                 }
             });
         },
-        /**
-         * 活体采集向导
-         * 
-         * @param {any} xml 
-         * @param {any} callback 
-         */
-        this.liveScan = function(xml,callback){
-            // 第一步:建立连接
-            var webSocket = new WebSocket("ws://localhost:9000");
-            // 第二步:连接成功之后去发送数据
-            webSocket.onopen = function() { // 连接成功后的回调函数
-                webSocket.send('livescan&' + xml);
-            };
-            // 第三步:接收到返回的数据后的操作
-            webSocket.onmessage = function(msg) {
-                var receiveData = msg.data; // 0 或者 1
-                callback(receiveData,webSocket.readyState);
-            };
-        }
-        /**
-         * 案件编号校验
-         * @param string type
-         * @param string txt
-         * @return boolean
-         */
-        this.caseCodeReg = function (type, txt) {
-            var regObj = {
-                'case': {
-                    '44': /^A\d{22}$/
-                },
-                'alert': {
-                    '44': /^J\d{24}$/
-                }
-            };
-            if (!security.currentUser.user.organizeCode) {
-                if (regObj[type]['44'].test(txt)) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                var reg = regObj[type][security.currentUser.user.organizeCode.substring(0, 2)];
-                if (!reg) {
-                    if (regObj[type]['44'].test(txt)) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                } else {
-                    if (reg.test(txt)) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            }
-        };
+  
         /**
          * 自动校验搜索
          * @param number keyCode
