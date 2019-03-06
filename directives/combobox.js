@@ -2,8 +2,8 @@
  * option directives
  * @Author: quemanting
  * @Date: 2017-09-22 10:28:30
- * @Last Modified by: quemanting
- * @Last Modified time: 2017-09-26 10:48:10
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-06 15:30:32
  **/
 /*用法
 数据结构:
@@ -34,7 +34,7 @@ define(['common/directives/directives'],function(directives){
             scope:{
                 info: "="
             },
-            templateUrl : "common/directives/combobox.html",
+            templateUrl : "bower_components/common/directives/combobox.html",
             link:function(scope,ele,attrs){
                 var fatherDom="#"+scope.info.config.id;
                 scope.changeText=function (item) {

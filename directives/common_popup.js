@@ -2,8 +2,8 @@
  * 弹窗组件
  * @Author: zhangxuelian 
  * @Date: 2018-04-26 10:14:26 
- * @Last Modified by: zhangxuelian
- * @Last Modified time: 2018-04-26 11:10:55
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-06 15:30:18
  **/
 define(['common/directives/directives'],function(directives){
     directives.directive("commonPopup", function($compile,normalUtil,$timeout,modalExt) {
@@ -13,7 +13,7 @@ define(['common/directives/directives'],function(directives){
             scope : {
                 popupConfig : '='
             },
-            templateUrl : "common/directives/common_popup.html",
+            templateUrl : "bower_components/common/directives/common_popup.html",
             link:function(scope,ele,attrs){
 
                 var popupConfig = {

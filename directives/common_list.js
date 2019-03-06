@@ -11,7 +11,7 @@ define(['common/directives/directives'],function(directives){
             scope : {
                 listConfig : '='
             },
-            templateUrl: "common/directives/common_list.html",
+            templateUrl: "bower_components/common/directives/common_list.html",
             link:function(scope,ele,attrs){
                 var listConfig = {
                     //是否显示

@@ -2,8 +2,8 @@
  * common table
  * @Author: zhangxuelian 
  * @Date: 2017-09-25 14:36:59 
- * @Last Modified by: zhangxuelian
- * @Last Modified time: 2018-05-03 16:33:44
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-06 15:29:36
  **/
 define(['common/directives/directives','artDialog'],function(directives){
     directives.directive("commonTable", function($compile,normalUtil,$timeout,modalExt) {
@@ -14,7 +14,7 @@ define(['common/directives/directives','artDialog'],function(directives){
             scope : {
                 tableConfig : '='
             },
-            templateUrl : "common/directives/common_table.html",
+            templateUrl : "bower_components/common/directives/common_table.html",
             link:function(scope,ele,attrs){
                 
                 //assist var

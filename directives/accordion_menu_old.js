@@ -2,8 +2,8 @@
  * 左侧菜单栏
  * @Author: zhangxuelian 
  * @Date: 2018-03-20 14:50:50 
- * @Last Modified by: zhangxuelian
- * @Last Modified time: 2018-03-26 21:49:37
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-06 15:30:46
  **/
 define(['common/directives/directives'],function(directives){
     directives.directive("accordionMenu", function($compile,normalUtil,$timeout,modalExt,$state) {
@@ -13,7 +13,7 @@ define(['common/directives/directives'],function(directives){
             scope : {
                 accordionConfig : '='
             },
-            templateUrl : "common/directives/accordion_menu.html",
+            templateUrl : "bower_components/common/directives/accordion_menu.html",
             link:function(scope,ele,attrs){
                 var defaultConfig = {
                     autoShrink: false,//是否自动收缩

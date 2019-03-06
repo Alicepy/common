@@ -2,8 +2,8 @@
  * common select ext
  * @Author: zhangxuelian 
  * @Date: 2017-11-03 15:21:18 
- * @Last Modified by: zhangxuelian
- * @Last Modified time: 2018-03-10 15:34:01
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-06 15:30:13
  **/
 define(['common/directives/directives'],function(directives){
     directives.directive("commonSelectExt", function($compile,normalUtil,$timeout,modalExt,$http) {
@@ -17,7 +17,7 @@ define(['common/directives/directives'],function(directives){
                 ngDisabled: '=',
                 ngItem:'='
             },
-            templateUrl : "common/directives/common_select_ext.html",
+            templateUrl : "bower_components/common/directives/common_select_ext.html",
             link:function(scope,ele,attrs){
                  var assistVar = {
                     unbindWatch1: null,

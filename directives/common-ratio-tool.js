@@ -2,8 +2,8 @@
  * 比例进度条（可拖拽）
  * @Author: zhangxuelian 
  * @Date: 2018-01-25 20:24:08 
- * @Last Modified by: zhangxuelian
- * @Last Modified time: 2018-01-26 16:37:00
+ * @Last Modified by: chenpeiyu
+ * @Last Modified time: 2019-03-06 15:29:45
  **/
 define(['common/directives/directives'],function(directives){
     directives.directive("commonRatioTool", function($compile,normalUtil,$timeout) {
@@ -13,7 +13,7 @@ define(['common/directives/directives'],function(directives){
             scope : {
                 ratioConfig : '='
             },
-            templateUrl : "common/directives/common-ratio-tool.html",
+            templateUrl : "bower_components/common/directives/common-ratio-tool.html",
             link:function(scope,ele,attrs){
                 var defaultConfig = {
                     percentArray:[50,75,100,125,150,200,400],
